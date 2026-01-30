@@ -1,12 +1,13 @@
 server:
-  port: 3000
+  port: ${PORT:8080}
 
 spring:
   datasource:
-    url: jdbc:postgresql://tramway.proxy.rlwy.net:46271/railway
-    username: postgres
-    password: pSGrfKHPtfvxMcPpdZrNTKGgiFZtraUI
+    url: ${DATABASE_URL}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
+
 
   jpa:
     hibernate:

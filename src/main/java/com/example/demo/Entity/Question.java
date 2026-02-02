@@ -32,6 +32,18 @@ public class Question {
 
     private String explanation;
 
+    @ManyToOne
+    @JoinColumn(name = "skill_id", insertable = false, updatable = false)
+    private Skill skill;
+
+    public Skill getSkill() {
+        return skill;
+    }
+
+    public void setSkill(Skill skill) {
+        this.skill = skill;
+    }
+
     // ===== Getters & Setters =====
 
     public UUID getId() {

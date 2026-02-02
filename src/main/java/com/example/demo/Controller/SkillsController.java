@@ -33,8 +33,9 @@ public class SkillsController {
         return questionRepo.findBySkillId(skillId);
     }
 
-    @GetMapping("/questions/{skillName}")
-    public List <Question> getQuestionBySkillName(@PathVariable String skillName) {
-        return questionRepo.findBySkillName(skillName);
+    @GetMapping("/questions/by-name/{skillName}")
+    public List<Question> getQuestionsBySkillName(@PathVariable String skillName) {
+        return questionRepo.findBySkill_Name(skillName);
     }
+
 }

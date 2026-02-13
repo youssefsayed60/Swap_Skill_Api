@@ -44,7 +44,6 @@ public class Question {
         this.skill = skill;
     }
 
-    // ===== Getters & Setters =====
 
     public UUID getId() {
         return id;
